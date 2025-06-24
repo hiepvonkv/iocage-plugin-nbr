@@ -21,7 +21,7 @@ fi
 #     exit 2
 # fi
 
-sh -x ./$INSTALL -f -y -i "$PRODUCT_ROOT" --eula-accept --extract
+sh ./$INSTALL -f -y -i "$PRODUCT_ROOT" --eula-accept --extract
 if [ $? -ne 0 ]; then
     echo "ERROR: $PRODUCT install failed"
     rm $INSTALL >/dev/null 2>&1
